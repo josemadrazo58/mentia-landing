@@ -1,0 +1,1059 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentia Clarity Sprint — 7 días para limpiar tu mente</title>
+  <meta name="description" content="Transforma tu mente en 7 días. Sprint guiado con ejercicios prácticos para recuperar tu enfoque, claridad mental y creatividad. Solo 20 minutos al día.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Arimo:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --black: #000000;
+      --lime: #C1FF72;
+      --white: #FFFFFF;
+      --gray-light: #F5F5F5;
+      --gray-mid: #666666;
+      --gray-dark: #333333;
+    }
+
+    body {
+      font-family: 'Arimo', sans-serif;
+      background: var(--white);
+      color: var(--black);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Header */
+    header {
+      padding: 24px 0;
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo-area {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .logo-circle {
+      width: 56px;
+      height: 56px;
+      background: var(--black);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .logo-circle img {
+      width: 32px;
+      height: 32px;
+      object-fit: contain;
+    }
+
+    .brand-text h1 {
+      font-size: 24px;
+      color: var(--black);
+      margin-bottom: 2px;
+    }
+
+    .brand-text p {
+      font-size: 12px;
+      color: var(--gray-mid);
+    }
+
+    .cta-header {
+      background: var(--lime);
+      color: var(--black);
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 2px solid var(--black);
+    }
+
+    .cta-header:hover {
+      transform: translateY(-2px);
+      box-shadow: 4px 4px 0 var(--black);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 0;
+      background: linear-gradient(135deg, var(--gray-light) 0%, var(--white) 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .hero-content {
+      animation: fadeInUp 0.8s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .badge {
+      display: inline-block;
+      background: var(--lime);
+      color: var(--black);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 24px;
+      border: 2px solid var(--black);
+    }
+
+    .hero h2 {
+      font-size: 52px;
+      margin-bottom: 24px;
+      color: var(--black);
+    }
+
+    .hero-subtitle {
+      font-size: 20px;
+      color: var(--gray-mid);
+      margin-bottom: 32px;
+      line-height: 1.6;
+    }
+
+    .cta-primary {
+      display: inline-block;
+      background: var(--black);
+      color: var(--lime);
+      padding: 18px 40px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 18px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: 3px solid var(--black);
+      margin-bottom: 16px;
+    }
+
+    .cta-primary:hover {
+      background: var(--lime);
+      color: var(--black);
+      transform: translateY(-3px);
+      box-shadow: 6px 6px 0 var(--black);
+    }
+
+    .price-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 16px;
+      font-size: 14px;
+      color: var(--gray-mid);
+    }
+
+    .hero-visual {
+      background: var(--black);
+      border-radius: 20px;
+      padding: 40px;
+      position: relative;
+      border: 4px solid var(--black);
+      box-shadow: 12px 12px 0 var(--lime);
+    }
+
+    .pdf-preview {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 24px;
+    }
+
+    .pdf-preview h4 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: var(--black);
+    }
+
+    .pdf-preview p {
+      color: var(--gray-mid);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .day-preview {
+      background: var(--gray-light);
+      padding: 16px;
+      border-radius: 8px;
+      border-left: 4px solid var(--lime);
+    }
+
+    .day-preview strong {
+      display: block;
+      margin-bottom: 6px;
+      font-size: 16px;
+    }
+
+    .day-preview span {
+      font-size: 13px;
+      color: var(--gray-mid);
+    }
+
+    /* Trust Section */
+    .trust-section {
+      padding: 60px 0;
+      background: var(--lime);
+      text-align: center;
+    }
+
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      margin-top: 40px;
+    }
+
+    .trust-item h3 {
+      font-size: 42px;
+      color: var(--black);
+      margin-bottom: 8px;
+    }
+
+    .trust-item p {
+      color: var(--gray-dark);
+      font-weight: 600;
+    }
+
+    /* Transformation */
+    .transformation-section {
+      padding: 80px 0;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .transformation-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .transformation-content h2 {
+      font-size: 42px;
+      text-align: center;
+      margin-bottom: 60px;
+      color: var(--lime);
+    }
+
+    .before-after {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+
+    .before, .after {
+      padding: 40px;
+      border-radius: 16px;
+    }
+
+    .before {
+      background: rgba(255,255,255,0.05);
+      border: 2px solid rgba(255,255,255,0.1);
+    }
+
+    .after {
+      background: rgba(193,255,114,0.1);
+      border: 2px solid var(--lime);
+    }
+
+    .before h3, .after h3 {
+      font-size: 28px;
+      margin-bottom: 24px;
+    }
+
+    .before h3 {
+      color: rgba(255,255,255,0.6);
+    }
+
+    .after h3 {
+      color: var(--lime);
+    }
+
+    .before ul, .after ul {
+      list-style: none;
+    }
+
+    .before li, .after li {
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 16px;
+    }
+
+    .before li::before {
+      content: "✗";
+      margin-right: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
+    .after li::before {
+      content: "✓";
+      margin-right: 12px;
+      color: var(--lime);
+      font-weight: 700;
+    }
+
+    /* Content Section */
+    .content-section {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .content-section h2 {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 60px;
+    }
+
+    .days-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-bottom: 40px;
+    }
+
+    .day-card {
+      background: var(--gray-light);
+      padding: 32px;
+      border-radius: 16px;
+      border: 3px solid var(--black);
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .day-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 6px 6px 0 var(--lime);
+    }
+
+    .day-number {
+      display: inline-block;
+      background: var(--black);
+      color: var(--lime);
+      padding: 8px 16px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 14px;
+      margin-bottom: 16px;
+    }
+
+    .day-card h3 {
+      font-size: 24px;
+      margin-bottom: 12px;
+    }
+
+    .bonus-card {
+      grid-column: 1 / -1;
+      background: var(--lime);
+      border-color: var(--black);
+      padding: 40px;
+      text-align: center;
+    }
+
+    .bonus-card h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    .bonus-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-top: 24px;
+    }
+
+    .bonus-item {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    /* FAQ */
+    .faq-section {
+      padding: 80px 0;
+      background: var(--gray-light);
+    }
+
+    .faq-section h2 {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 60px;
+    }
+
+    .faq-container {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .faq-item {
+      background: var(--white);
+      border: 3px solid var(--black);
+      border-radius: 12px;
+      margin-bottom: 16px;
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 24px;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 700;
+      font-size: 18px;
+      transition: background 0.3s;
+    }
+
+    .faq-question:hover {
+      background: var(--gray-light);
+    }
+
+    .faq-icon {
+      font-size: 24px;
+      font-weight: 700;
+      transition: transform 0.3s;
+    }
+
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-answer-content {
+      padding: 0 24px 24px;
+      color: var(--gray-mid);
+      line-height: 1.7;
+    }
+
+    /* Testimonials */
+    .testimonials-section {
+      padding: 80px 0;
+      background: var(--white);
+    }
+
+    .testimonials-section h2 {
+      text-align: center;
+      font-size: 42px;
+      margin-bottom: 60px;
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+
+    .testimonial-card {
+      background: var(--gray-light);
+      padding: 32px;
+      border-radius: 16px;
+      border: 3px solid var(--black);
+    }
+
+    .testimonial-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+
+    .avatar {
+      width: 50px;
+      height: 50px;
+      background: var(--black);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--lime);
+      font-weight: 700;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .testimonial-info h4 {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
+
+    .testimonial-info p {
+      font-size: 14px;
+      color: var(--gray-mid);
+    }
+
+    .stars {
+      color: var(--black);
+      font-size: 18px;
+      margin-bottom: 16px;
+    }
+
+    .testimonial-text {
+      color: var(--gray-dark);
+      font-style: italic;
+      line-height: 1.7;
+    }
+
+    /* Final CTA */
+    .final-cta {
+      padding: 100px 0;
+      background: var(--lime);
+      text-align: center;
+    }
+
+    .final-cta h2 {
+      font-size: 48px;
+      margin-bottom: 24px;
+    }
+
+    .final-cta p {
+      font-size: 22px;
+      color: var(--gray-dark);
+      margin-bottom: 40px;
+    }
+
+    .guarantee {
+      margin-top: 40px;
+      font-size: 14px;
+      color: var(--gray-dark);
+    }
+
+    /* Footer */
+    footer {
+      padding: 60px 0 30px;
+      background: var(--black);
+      color: var(--white);
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 60px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .footer-logo {
+      width: 60px;
+      height: 60px;
+      background: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .footer-logo img {
+      width: 36px;
+      height: 36px;
+      object-fit: contain;
+    }
+
+    .footer-brand-text h3 {
+      color: var(--lime);
+      font-size: 28px;
+      margin-bottom: 4px;
+    }
+
+    .footer-brand-text p {
+      color: rgba(255,255,255,0.6);
+      font-size: 14px;
+    }
+
+    .footer-links h4 {
+      color: var(--lime);
+      margin-bottom: 16px;
+    }
+
+    .footer-links a {
+      display: block;
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      margin-bottom: 12px;
+      transition: color 0.3s;
+    }
+
+    .footer-links a:hover {
+      color: var(--lime);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      width: 40px;
+      height: 40px;
+      background: var(--lime);
+      color: var(--black);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-weight: 700;
+      transition: all 0.3s;
+    }
+
+    .social-links a:hover {
+      transform: translateY(-4px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 30px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.5);
+    }
+
+    /* Responsive */
+    @media (max-width: 968px) {
+      .hero-grid,
+      .before-after,
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-grid,
+      .days-grid,
+      .testimonials-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .bonus-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .hero h2 {
+        font-size: 36px;
+      }
+
+      .cta-header {
+        display: none;
+      }
+
+      h2 {
+        font-size: 32px !important;
+      }
+
+      .bonus-card {
+        grid-column: 1;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 0 16px;
+      }
+
+      .hero {
+        padding: 40px 0;
+      }
+
+      .hero h2 {
+        font-size: 28px;
+      }
+
+      .hero-subtitle {
+        font-size: 16px;
+      }
+
+      .bonus-list {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo-area">
+          <div class="logo-circle">
+            <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 20 L15 80 M45 20 L30 80" stroke="#C1FF72" stroke-width="8" stroke-linecap="round"/>
+              <rect x="60" y="30" width="25" height="15" fill="#C1FF72" rx="2"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <h1>Mentia</h1>
+            <p>Clarity Sprint · 7 días</p>
+          </div>
+        </div>
+        <a href="https://go.hotmart.com/T102621621A" class="cta-header">Comenzar ahora</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <span class="badge">Sprint de 7 días · Solo 20 min/día</span>
+          <h2>Claridad mental en 7 días. Recupera tu enfoque. Reconecta con tu creatividad.</h2>
+          <p class="hero-subtitle">Un sistema probado con ejercicios prácticos para personas que buscan claridad mental sin perder horas de su día.</p>
+          <a href="https://go.hotmart.com/T102621621A" class="cta-primary">Acceder ahora por $15 USD</a>
+          <div class="price-info">
+            <span>✓ Acceso inmediato</span>
+            <span>✓ PDF descargable</span>
+            <span>✓ Plantillas incluidas</span>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="pdf-preview">
+            <h4>📖 Mentia Clarity Sprint</h4>
+            <p>7 días estructurados para transformar tu mente</p>
+            <div class="day-preview">
+              <strong>Día 1: Detox Mental</strong>
+              <span>Brain dump estructurado • Plantilla lista para usar</span>
+            </div>
+          </div>
+          <a href="https://go.hotmart.com/T102621621A" class="cta-primary" style="width: 100%; text-align: center;">Comenzar mi transformación</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trust Indicators -->
+  <section class="trust-section">
+    <div class="container">
+      <h2>Resultados que hablan por sí mismos</h2>
+      <div class="trust-grid">
+        <div class="trust-item">
+          <h3>7+</h3>
+          <p>Ejercicios diseñados para dar resultados</p>
+        </div>
+        <div class="trust-item">
+          <h3>20 min</h3>
+          <p>Por día es suficiente</p>
+        </div>
+        <div class="trust-item">
+          <h3>7 días</h3>
+          <p>Para ver cambios reales</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Transformation -->
+  <section class="transformation-section">
+    <div class="container">
+      <div class="transformation-content">
+        <h2>Tu transformación en 7 días</h2>
+        <div class="before-after">
+          <div class="before">
+            <h3>Antes del Sprint</h3>
+            <ul>
+              <li>Mente saturada de pendientes</li>
+              <li>Distracciones constantes</li>
+              <li>Falta de dirección clara</li>
+              <li>Metas que no se cumplen</li>
+              <li>Sensación de estar ocupado sin avanzar</li>
+              <li>Estrés y agotamiento mental</li>
+            </ul>
+          </div>
+          <div class="after">
+            <h3>Después del Sprint</h3>
+            <ul>
+              <li>Mente clara y organizada</li>
+              <li>Enfoque profundo cuando lo necesitas</li>
+              <li>Dirección clara con tus metas</li>
+              <li>Sistema para cumplir objetivos</li>
+              <li>Tiempo invertido en lo importante</li>
+              <li>Sensación de control y propósito</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Breakdown -->
+  <section class="content-section">
+    <div class="container">
+      <h2>Qué incluye el sprint</h2>
+      <div class="days-grid">
+        <div class="day-card">
+          <span class="day-number">Día 1</span>
+          <h3>Detox Mental</h3>
+        </div>
+        <div class="day-card">
+          <span class="day-number">Día 2</span>
+          <h3>Ordena tus ideas</h3>
+        </div>
+        <div class="day-card">
+          <span class="day-number">Día 3</span>
+          <h3>Cambia tu atención</h3>
+        </div>
+        <div class="day-card">
+          <span class="day-number">Día 4</span>
+          <h3>Redefine tus metas</h3>
+        </div>
+        <div class="day-card">
+          <span class="day-number">Día 5</span>
+          <h3>Simplifica tu rutina</h3>
+        </div>
+        <div class="day-card">
+          <span class="day-number">Día 6</span>
+          <h3>Activa tu enfoque</h3>
+        </div>
+        <div class="day-card">
+          <span class="day-number">Día 7</span>
+          <h3>Celebra y ancla</h3>
+        </div>
+      </div>
+      
+      <div class="bonus-card">
+        <h3>✨ Extras incluidos</h3>
+        <div class="bonus-list">
+          <div class="bonus-item">✓ Plantillas imprimibles</div>
+          <div class="bonus-item">✓ Habit tracker mensual</div>
+          <div class="bonus-item">✓ Ejercicios guiados</div>
+          <div class="bonus-item">✓ Diseño minimalista</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq-section">
+    <div class="container">
+      <h2>Preguntas frecuentes</h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>¿Cómo recibiré el contenido?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Inmediatamente después de tu compra en Hotmart recibirás acceso al PDF descargable con todo el contenido del sprint, plantillas y ejercicios listos para imprimir o usar digitalmente.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>¿Realmente son solo 20 minutos al día?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Sí. Cada día tiene un ejercicio específico diseñado para completarse en 15-20 minutos. Lo hemos probado con cientos de usuarios y es totalmente factible incluso con agendas ocupadas.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>¿En qué formato viene?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Es un PDF profesional de 26 páginas con diseño minimalista. Incluye explicaciones claras, plantillas imprimibles, habit tracker mensual y ejercicios guiados paso a paso.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>¿Para quién es este sprint?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              Para cualquier persona que busque claridad mental, mejor enfoque y un sistema para cumplir sus metas. No necesitas experiencia previa en desarrollo personal.
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            <span>¿Puedo repetir el sprint?</span>
+            <span class="faq-icon">+</span>
+          </div>
+          <div class="faq-answer">
+            <div class="faq-answer-content">
+              ¡Absolutamente! Muchos usuarios lo repiten mensualmente o cada vez que sienten que necesitan un "reset mental". El contenido es tuyo de por vida.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section class="testimonials-section">
+    <div class="container">
+      <h2>Lo que dicen quienes ya lo probaron</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="avatar">AM</div>
+            <div class="testimonial-info">
+              <h4>Ana Martínez</h4>
+              <p>Diseñadora UX</p>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Llevaba meses sintiéndome bloqueada creativamente. En solo 7 días logré organizar mi mente y recuperar el enfoque que había perdido. Los ejercicios son súper prácticos."</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="avatar">CR</div>
+            <div class="testimonial-info">
+              <h4>Carlos Ruiz</h4>
+              <p>Emprendedor</p>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Lo mejor es que no te roba tiempo. 20 minutos al día y ya. El sistema de bloques de enfoque cambió completamente mi forma de trabajar. Ahora logro más en menos tiempo."</p>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-header">
+            <div class="avatar">LS</div>
+            <div class="testimonial-info">
+              <h4>Laura Sánchez</h4>
+              <p>Estudiante MBA</p>
+            </div>
+          </div>
+          <div class="stars">★★★★★</div>
+          <p class="testimonial-text">"Entre el trabajo y la maestría estaba saturada. El brain dump del día 1 fue liberador. Finalmente tengo claridad sobre mis prioridades y un sistema para avanzar."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Final CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <h2>Tu mente más clara está a 7 días de distancia</h2>
+      <p>No esperes más para recuperar tu enfoque y claridad mental</p>
+      <a href="https://go.hotmart.com/T102621621A" class="cta-primary" style="font-size: 20px; padding: 20px 50px;">Acceder ahora — $15 USD</a>
+      <div class="guarantee">
+        ✓ Acceso inmediato • ✓ PDF descargable • ✓ Todas las plantillas incluidas
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M30 20 L15 80 M45 20 L30 80" stroke="#000000" stroke-width="8" stroke-linecap="round"/>
+              <rect x="60" y="30" width="25" height="15" fill="#000000" rx="2"/>
+            </svg>
+          </div>
+          <div class="footer-brand-text">
+            <h3>Mentia</h3>
+            <p>Clarity Sprint · 7 días</p>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>Producto</h4>
+          <a href="https://go.hotmart.com/T102621621A">Comprar ahora</a>
+          <a href="#faq">Preguntas frecuentes</a>
+        </div>
+        <div class="footer-links">
+          <h4>Comunidad</h4>
+          <a href="https://www.instagram.com/mentia.lat/" target="_blank" rel="noopener">Instagram</a>
+          <div class="social-links">
+            <a href="https://www.instagram.com/mentia.lat/" target="_blank" rel="noopener">IG</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2024 Mentia · Clarity Sprint. Todos los derechos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ Accordion
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const faqItem = question.parentElement;
+        const answer = faqItem.querySelector('.faq-answer');
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all FAQs
+        document.querySelectorAll('.faq-item').forEach(item => {
+          item.classList.remove('active');
+          item.querySelector('.faq-answer').style.maxHeight = '0';
+        });
+        
+        // Open clicked FAQ if it wasn't active
+        if (!isActive) {
+          faqItem.classList.add('active');
+          answer.style.maxHeight = answer.scrollHeight + 'px';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
